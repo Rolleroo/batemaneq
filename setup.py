@@ -5,6 +5,7 @@
 
 import io
 import os
+import re
 import shutil
 import sys
 from setuptools import setup
@@ -57,6 +58,7 @@ else:
     TAGGED_RELEASE = False
     # read __version__ attribute from release.py:
     exec(io.open(release_py_path, encoding='utf-8').read())
+
 
 class BuildExt(build_ext):
     """A custom build extension for adding compiler-specific options."""
